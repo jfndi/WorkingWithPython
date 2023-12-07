@@ -1,13 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import os
 from sklearn.linear_model import LinearRegression
 
 #
 # Download and prepare the data.
 #
-data_root = "https://github.com/ageron/data/blob/main/"
-lifesat = pd.read_csv(data_root + "lifesat/lifesat.csv")
+data_root = os.path.dirname(os.path.abspath(__file__))
+lifesat = pd.read_csv(data_root + "\\lifesat.csv")
 X = lifesat[["GDP per capita (USD)"]].values
 y = lifesat[["Life satisfaction"]].values
 
@@ -34,4 +35,4 @@ model.fit(X, y)
 # Make a prediction.
 #
 X_new = [[37_655.2]]
-print(model.pedict(X_new))
+print(model.predict(X_new))
