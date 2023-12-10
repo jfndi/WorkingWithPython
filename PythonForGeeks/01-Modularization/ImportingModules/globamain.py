@@ -11,7 +11,9 @@ Created on Fri May 20 17:31:12 2022
 
 
 def print_globals():
-    print(globals())
+    g = globals()
+    for item in g:
+        print(f'{item}: {g[item]}')
 
 
 def hello():
