@@ -26,6 +26,10 @@ def my_main():
     print("Sum is {}".format(result))
     print("Diff is {}".format(diff))
 
+    dic = globals()
+    for g in dic:
+        print(f'{g}: {dic[g]}')
+
 
 """ This is executed only if the special variable '__name__' is set as main """
 if __name__ == "__main__":
