@@ -8,7 +8,7 @@ carexample6.py:
     This example shows how to define private and protected attributes and/or
     methods.
     NOTE: There is still some way to access them directly (not shown here) but
-    it is considered as REALLY TERRIBLE practice as it nullify the information
+    it is considered as REALLY TERRIBLE practice as it nullifies the information
     hiding paradigm.
 
 """
