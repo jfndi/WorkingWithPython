@@ -1,16 +1,15 @@
 """
-pkgmain2.py:
+pkgmain4.py:
 
     Created on 14-Dec-23
     
     @Author: Jean-François Ndi
 """
-# pkgmain0.py with main function.
+# pkgmain4.py with sys.path append code.
 import os
 import sys
 
-dir_path = os.path.abspath(os.path.join(os.path.dirname(
-                           os.path.abspath(__file__)), os.pardir))
+dir_path = os.path.dirname(os.path.abspath(__file__))
 assert isinstance(dir_path, str)
 sys.path.append(dir_path)
 
