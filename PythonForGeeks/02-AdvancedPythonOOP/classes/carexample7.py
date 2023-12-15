@@ -12,7 +12,7 @@ class Car:
     c_mileage_unit = "Mi"
 
 
-    def __init__(self, color, miles, model):
+    def __init__(self, color, miles):
         self.__color = color
         self.__mileage = miles
 
@@ -33,7 +33,7 @@ class Car:
         self.__mileage = new_mil
 
 if __name__ == "__main__":
-    car = Car("blue", 1000, "Camry")
+    car = Car("blue", 10000)
     print(car)
     print(car.get_color())
     print(car.get_mileage())
