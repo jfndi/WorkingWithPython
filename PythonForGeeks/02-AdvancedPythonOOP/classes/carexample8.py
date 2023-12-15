@@ -1,11 +1,11 @@
 """
-carexample7.py:
+carexample8.py:
 
     Created on 15-Dec-23
     
     @Author: Jean-François Ndi
 
-    This example shows the traditional way to write attribute getters and setters.
+    This example shows how to use attribute decorators to define getter and setters.
 
 """
 class Car:
@@ -21,23 +21,26 @@ class Car:
         return f'Car with color {self.__color}, mileage '\
                f'{self.__mileage}.'
 
-    def get_color(self):
+
+    @property
+    def color(self):
         return self.__color
 
 
-    def get_mileage(self):
+    @property
+    def mileage(self):
         return self.__mileage
 
 
-    def set_mileage(self, new_mil):
+    @mileage.setter
+    def mileage(self, new_mil):
         self.__mileage = new_mil
 
 if __name__ == "__main__":
     car = Car("blue", 1000, "Camry")
     print(car)
-    print(car.get_color())
-    print(car.get_mileage())
-    car.set_mileage(2000)
-    print(car.get_color())
-    print(car.get_mileage())
-
+    print(car.color)
+    print(car.mileage)
+    car.mileage = 2000
+    print(car.color)
+    print(car.mileage)
