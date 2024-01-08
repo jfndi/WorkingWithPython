@@ -1,7 +1,7 @@
 """
     multifileread.py
     
-    Created by Jean-Fançois Ndi @ 08/01/2024
+    Created by Jean-François Ndi @ 08/01/2024
     
 """
 
